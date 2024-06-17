@@ -22,15 +22,18 @@ def get_skills_for_domain(domain: str) -> str:
 
     # Prompt template for skills in the specified domain
     template = f"""
-        Provide a list of 20 skills required for a {domain} professional.
-        Please include both technical and soft skills.
+    Provide only a list of 20 skills required for a {domain} professional without neither explanations nor notes.
+    Please format the response as a list, including both technical and soft skills. for exemple if the input is data science the output should be 'bias', 'Hadoop', 'Azure', 'decision trees', 'PyTorch', 'clustering', 'Python', 'TensorFlow', 'PostgreSQL', 'random forests', 'Kafka', 'NumPy', 'AWS', 'Scikit-learn', 'regression', 'D3.js', 'Spark', 'time series analysis', 'Pandas', 'MySQL', 'MongoDB', 'R', 'data privacy', 'Power BI', 'SQL', 'GCP', 'Tableau', 'hypothesis testing'
         """
+    
+
 
     prompt = PromptTemplate(input_variables=[], template=template)
 
     try:
         # Generate the response from the LLama2 model
         response = llm(prompt.template)
+        
         return response
     except Exception as e:
         print(f"Error generating skills: {e}")

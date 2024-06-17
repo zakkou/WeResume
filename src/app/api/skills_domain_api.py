@@ -29,16 +29,7 @@ async def opt_edu(education: str):
 @app.get("/domainskill/{domain}")
 async def get_domainskill(domain: str): 
     desc = get_skills_for_domain(domain)
-    skills_set = set()
-
-    # Use regular expression to extract skills from text within parentheses
-    matches = re.findall(r'\((.*?)\)', desc)
-    for match in matches:
-        # Split the matches by comma and strip whitespace from each skill, removing both single and double quotes
-        skills = [skill.strip().replace("'", "").replace('"', "") for skill in match.split(",") if skill.strip() not in ("etc.", "e.g.")]
-        skills_set.update(skills)
-
-    return skills_set
+    return { desc}
 
 
 @app.get("/exp/{experience}")

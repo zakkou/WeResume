@@ -14,15 +14,10 @@ const QAS = [
           automatically generates a resume for you.
         </p>
         <p>
-          Using a resume template requires manual formatting work, like copying
-          and pasting text sections and adjusting spacing, which can be
-          time-consuming and error-prone. It is easy to run into formatting
-          issues, such as using different bullet points or font styles after
-          copying and pasting. On the other hand, a resume builder like
-          WeResume saves time and prevents formatting mistakes by
-          automatically formatting the resume. It also offers the convenience of
-          easily changing font types or sizes with a simple click. In summary, a
-          resume builder is easier to use compared to a resume template.
+        In this project, we are leveraging artificial intelligence to build an 
+        advanced resume builder. The AI component, powered by a language model 
+        like LLama2, generates skills and other relevant content for the resume 
+        based on the user’s domain of expertise. 
         </p>
       </>
     ),
@@ -69,7 +64,7 @@ const QAS = [
     answer: (
       <p>
         WeResume was created by{" "}
-        <Link href="https://github.com/zakkou">Hamdi Baklouti</Link>  as
+        <Link href="https://wereact.co/">WeReact</Link>  as
         an end of studies project. We all had made many mistakes
         when creating our first resumes and applying for internships and jobs.
         It took us a long while to learn some of the best practices. While
